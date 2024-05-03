@@ -27,7 +27,7 @@ class MyFonts {
   static TextStyle get chipTextStyle => getAppFontType;
 
   // appbar font size
-  static double get appBarTittleSize => 18.sp;
+  static double get appBarTittleSize => 25.sp;
 
   // body font size
   static double get bodySmallTextSize => 11.sp;

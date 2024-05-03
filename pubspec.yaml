@@ -3,7 +3,7 @@ version: 1.0.0+1
 publish_to: none
 description: start your project in the fastest way
 environment:
-  sdk: '>=3.0.1 <4.0.0'
+  sdk: ">=3.0.1 <4.0.0"
 
 dependencies:
   cupertino_icons: ^1.0.5
@@ -26,10 +26,12 @@ dependencies:
   change_app_package_name: # change package name
   rename_app: 1.0.0 # rename app
 
-  flutter_svg:  # display svg vectors
+  flutter_svg: # display svg vectors
 
   flutter:
     sdk: flutter
+  gap: ^3.0.1
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   mockito:
@@ -71,4 +73,6 @@ flutter:
           weight: 500
         - asset: assets/fonts/Cairo-SemiBold.ttf
           weight: 900
-
+    - family: ElMessiri
+      fonts:
+        - asset: assets/fonts/ElMessiri.ttf

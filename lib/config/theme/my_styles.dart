@@ -35,16 +35,24 @@ class MyStyles {
   ///text theme
   static TextTheme getTextTheme({required bool isLightTheme}) => TextTheme(
         labelLarge: MyFonts.buttonTextStyle.copyWith(
-          fontSize: MyFonts.buttonTextSize,
+          fontSize: MyFonts.appBarTittleSize,
+          fontFamily: "ElMessiri",
+        ),
+        labelMedium: MyFonts.buttonTextStyle.copyWith(
+          fontSize: MyFonts.bodyLargeSize,
+          fontFamily: "ElMessiri",
+          color: LightThemeColors.hintTextColor,
         ),
         bodyLarge: (MyFonts.bodyTextStyle).copyWith(
           fontWeight: FontWeight.bold,
-          fontSize: MyFonts.bodyLargeSize,
+          fontSize: MyFonts.displayLargeSize,
+          fontFamily: "ElMessiri",
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
               : DarkThemeColors.bodyTextColor,
         ),
         bodyMedium: (MyFonts.bodyTextStyle).copyWith(
+          fontFamily: "ElMessiri",
           fontSize: MyFonts.bodyMediumSize,
           color: isLightTheme
               ? LightThemeColors.bodyTextColor
@@ -52,23 +60,27 @@ class MyStyles {
         ),
         displayLarge: (MyFonts.displayTextStyle).copyWith(
           fontSize: MyFonts.displayLargeSize,
+          fontFamily: "ElMessiri",
           fontWeight: FontWeight.bold,
           color: isLightTheme
               ? LightThemeColors.displayTextColor
               : DarkThemeColors.displayTextColor,
         ),
         bodySmall: TextStyle(
+            fontFamily: "ElMessiri",
             color: isLightTheme
                 ? LightThemeColors.bodySmallTextColor
                 : DarkThemeColors.bodySmallTextColor,
             fontSize: MyFonts.bodySmallTextSize),
         displayMedium: (MyFonts.displayTextStyle).copyWith(
             fontSize: MyFonts.displayMediumSize,
+            fontFamily: "ElMessiri",
             fontWeight: FontWeight.bold,
             color: isLightTheme
                 ? LightThemeColors.displayTextColor
                 : DarkThemeColors.displayTextColor),
         displaySmall: (MyFonts.displayTextStyle).copyWith(
+          fontFamily: "ElMessiri",
           fontSize: MyFonts.displaySmallSize,
           fontWeight: FontWeight.bold,
           color: isLightTheme

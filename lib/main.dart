@@ -33,9 +33,10 @@ Future<void> main() async {
       builder: (context, widget) {
         return GetMaterialApp(
           // todo add your app name
-          title: "GetXSkeleton",
+          title: "Driving School",
           useInheritedMediaQuery: true,
           debugShowCheckedModeBanner: false,
+          textDirection: TextDirection.rtl,
           builder: (context, widget) {
             bool themeIsLight = SharedPref.getThemeIsLight();
             return Theme(
