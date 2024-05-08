@@ -43,9 +43,11 @@ class TestView extends GetView<TestController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("اختبار رخصة السياقة"),
-      ),
+      appBar: AppBar(title: const Text("اختبار رخصة السياقة"), actions: [
+        CircleAvatar(
+          child: ClipOval(child: Image.asset("assets/images/person1.png")),
+        ),
+      ]),
       body: Expanded(
         child: CarouselSlider(
           items: questions
@@ -98,7 +100,28 @@ class TestView extends GetView<TestController> {
                             ),
                           ),
                         ),
-                        const Gap(100),
+                        //     const Gap(100),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                                onPressed: () {
+                                  carouselController.nextPage();
+                                },
+                                child: const Text(
+                                  "التالي",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                            const Spacer(),
+                            ElevatedButton(
+                                onPressed: () {
+                                  carouselController.previousPage();
+                                },
+                                child: const Text(
+                                  "السابق",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                          ],
+                        )
                       ]),
                 ),
               )
@@ -109,7 +132,7 @@ class TestView extends GetView<TestController> {
             aspectRatio: 16 / 9,
             viewportFraction: 0.8,
             initialPage: 0,
-            enableInfiniteScroll: true,
+            enableInfiniteScroll: false,
             reverse: false,
             autoPlay: false,
             autoPlayInterval: const Duration(seconds: 3),
