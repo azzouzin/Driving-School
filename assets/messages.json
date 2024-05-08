@@ -1,0 +1,82 @@
+[
+    {
+      "author": {
+        "firstName": "John",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "imageUrl":"https://i.pravatar.cc/150?u=a142587f6359629704m",
+        "lastName": "Doe"
+      },
+      "createdAt": 1655648404000,
+      "id": "c67ed376-52bf-4d4e-ba2a-7a0f8467b22a",
+      "status": "seen",
+      "text": "ممتاز راك محضر",
+      "type": "text"
+    },
+    
+    
+    {
+      "author": {
+        "firstName": "Matthew",
+        "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+        "lastName": "White"
+      },
+      "createdAt": 1655648401000,
+      "id": "64747b28-df19-4a0c-8c47-316dc3546e3c",
+      "status": "seen",
+      "text": "اتفضل استاذ",
+      "type": "text"
+    },
+    {
+      "author": {
+        "firstName": "Matthew",
+        "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+        "lastName": "White"
+      },
+      "createdAt": 1655648400000,
+      "id": "6a1a4351-cf05-4d0c-9d0f-47ed378b6112",
+      "mimeType": "application/pdf",
+      "name": "اختبار السياقة التجريبي.pdf",
+      "size": 10550000,
+      "status": "seen",
+      "type": "file",
+      "uri": "https://www.noor-book.com/book/internal_download/37e529af4fa6bb634e66b54d4f8ff84832f6c249/3/101cc16358021908c9d1d0e1ccfb33dd"
+    },
+    {
+      "author": {
+        "imageUrl":"https://i.pravatar.cc/150?u=a142587f6359629704m",
+        "firstName": "John",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "lastName": "Doe"
+      },
+      "createdAt": 1655624464000,
+      "id": "38681a33-2563-42aa-957b-cfc12f791d16",
+      "status": "seen",
+      "text": "ارسلي نتائج الاختبار اللي عطيتولك البارحة  ",
+      "type": "text"
+    },
+    {
+      "author": {
+        "firstName": "Matthew",
+        "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+        "lastName": "White"
+      },
+      "createdAt": 1655624463000,
+      "id": "113bb2e8-f74e-42cd-aa30-4085a0f52c58",
+      "status": "seen",
+      "text": "ادا ممكن استاذ نديرو مراجعة خفيفة",
+      "type": "text"
+    },
+    {
+      "author": {
+        "firstName": "John",
+        "imageUrl":"https://i.pravatar.cc/150?u=a142587f6359629704m",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "lastName": "Doe"
+      },
+      "createdAt": 1655624460000,
+      "id": "634b2f0b-2486-4bfe-b36d-1c7d6313c7b3",
+      "status": "seen",
+      "text": "السلام عليكم الطالب موعد اللاختبار غدا",
+      "type": "text"
+    }
+  ]
