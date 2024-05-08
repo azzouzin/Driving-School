@@ -3,5 +3,6 @@ class Routes {
 static const SCHOOLDETAILS = "/schooldetails";
 static const SCHOOL = "/school";
 static const CHAT = "/chat";
-  static const STATSPAGE = "/statspage";
+static const STATSPAGE = "/statspage";
+  static const TEST = "/test";
 }
