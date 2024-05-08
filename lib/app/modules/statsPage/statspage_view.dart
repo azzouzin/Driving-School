@@ -55,11 +55,11 @@ class _StatsPageState extends State<StatsPage> {
                   top: 60, right: 20, left: 20, bottom: 25),
               child: Column(
                 children: [
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "احائيات شهر ماي",
+                        "احصائيات شهر ${months[activeDay]['day']}",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,

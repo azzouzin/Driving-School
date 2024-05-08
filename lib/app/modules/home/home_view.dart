@@ -23,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
         body: SafeArea(
           child: currentIndex == 1
-              ? SchoolView()
+              ? const SchoolView()
               : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   const MyAppBar(),
                   Gap(16.h),
@@ -69,10 +69,10 @@ class _HomeViewState extends State<HomeView> {
         ),
         bottomNavigationBar: BottomNavigationBar(
             items: [
-              BottomNavigationBarItem(
+              const BottomNavigationBarItem(
                   icon: Icon(Icons.person), label: "قسم التلاميذ"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.no_flash), label: "المدرسة"),
+              const BottomNavigationBarItem(
+                  icon: Icon(Icons.school), label: "المدرسة"),
             ],
             currentIndex: currentIndex,
             onTap: (i) => setState(() {

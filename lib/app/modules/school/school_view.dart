@@ -39,13 +39,13 @@ class _SchoolViewState extends State<SchoolView> {
                   ),
                   Tab(
                     child: Icon(
-                      Icons.shopping_cart,
+                      Icons.document_scanner,
                       size: 30,
                     ),
                   ),
                   Tab(
                     child: Icon(
-                      Icons.person,
+                      Icons.present_to_all,
                       size: 30,
                     ),
                   ),
