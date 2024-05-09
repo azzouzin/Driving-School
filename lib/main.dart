@@ -50,8 +50,8 @@ Future<void> main() async {
               ),
             );
           },
-          initialRoute: Routes.TEST,
-          //initialRoute: AppPages.routes[0].name,
+          //  initialRoute: Routes.TEST,
+          initialRoute: AppPages.routes[0].name,
           // first screen to show when app is running
           getPages: AppPages.routes,
           // app screens
