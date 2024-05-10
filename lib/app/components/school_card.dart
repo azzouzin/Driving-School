@@ -34,7 +34,7 @@ class SchoolCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.r),
                   child: Image.asset(
-                    "assets/images/dr1.jpg",
+                    schoolModel.image,
                     fit: BoxFit.cover,
                   ),
                 ),

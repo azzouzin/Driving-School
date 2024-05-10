@@ -1,14 +1,24 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:getx_skeleton/app/components/custom_snackbar.dart';
 
 import './test_controller.dart';
 
 class TestView extends GetView<TestController> {
   TestView({super.key});
   final List<String> questions = [
-    "  متى يمنع الدوران الى اليسار ",
+    "1 الى ماذا تشير الصورة في الاسفل",
+    "2 الى ماذا تشير الصورة في الاسفل",
+    "3 الى ماذا تشير الصورة في الاسفل",
+    "3 الى ماذا تشير الصورة في الاسفل",
+    "4 الى ماذا تشير الصورة في الاسفل",
+    "5 الى ماذا تشير الصورة في الاسفل",
+    "6 الى ماذا تشير الصورة في الاسفل",
+    "7 الى ماذا تشير الصورة في الاسفل",
+    "متى يمنع الدوران الى اليسار ",
     "متى يمنع القيام بنصف دورة",
     "متى تكون الأولوية الى اليمين ",
     "ماهي انظمة الأولوية ",
@@ -22,6 +32,7 @@ class TestView extends GetView<TestController> {
     "ماهو دور مختلف اضواء المركبات دات المحرك ؟ اذكرهم ؟",
     "ماهي المناورات الممنوعة في الطريق السيار و السريع ؟",
   ];
+  List<int> photos = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   final List<TextEditingController> controllers = [
     TextEditingController(),
     TextEditingController(),
@@ -70,7 +81,12 @@ class TestView extends GetView<TestController> {
                           e,
                           style: Get.theme.textTheme.labelLarge,
                         ),
-                        const Gap(100),
+                        questions.indexOf(e) < 8
+                            ? Image.asset(
+                                "assets/images/${questions.indexOf(e) + 1}.jpg")
+                            : Container(),
+                        const Gap(10),
+
                         Row(
                           children: [
                             Text(
@@ -100,9 +116,13 @@ class TestView extends GetView<TestController> {
                           ),
                         ),
                         //     const Gap(100),
+                        const Gap(16),
                         Row(
                           children: [
                             ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green,
+                                ),
                                 onPressed: () {
                                   carouselController.nextPage();
                                 },
@@ -112,23 +132,34 @@ class TestView extends GetView<TestController> {
                                 )),
                             const Spacer(),
                             ElevatedButton(
-                                onPressed: () {
-                                  carouselController.previousPage();
-                                },
-                                child: const Text(
-                                  "السابق",
-                                  style: TextStyle(color: Colors.white),
-                                )),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.orange,
+                              ),
+                              onPressed: () {
+                                carouselController.previousPage();
+                              },
+                              child: const Text(
+                                "السابق",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
                           ],
                         ),
-                            ElevatedButton(
-                                onPressed: () {
-                                  carouselController.previousPage();
-                                },
-                                child: const Text(
-                                  "السابق",
-                                  style: TextStyle(color: Colors.white),
-                                )),
+                        Gap(16.h),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                fixedSize: Size(300.w, 50)),
+                            onPressed: () {
+                              Get.back();
+                              CustomSnackBar.showCustomSnackBar(
+                                  title: "تم تسجيل الاختبار بنجاح",
+                                  message:
+                                      " سيتم عرض النتيجة عند تقييم الاختبار من طرف المدرسة");
+                            },
+                            child: const Text(
+                              "انهاء الاختبار",
+                              style: TextStyle(color: Colors.white),
+                            )),
                       ]),
                 ),
               )

@@ -15,7 +15,7 @@ final listOfSchools = [
   SchoolModel(
     name: "مدرسة الفتح",
     id: "0",
-    image: "assets/images/dr1.jpg",
+    image: "assets/images/ds.jpg",
     address: "حي 1500 مسكن مدرسة الفتح",
     email: "esalaamEcole@gmail.com",
     phone: "0562413935",
@@ -26,8 +26,8 @@ final listOfSchools = [
   SchoolModel(
     name: "مدرسة البدر",
     id: "0",
-    image: "assets/images/dr1.jpg",
-    address: "حي 1500 مسكن مدرسة البدر",
+    image: "assets/images/ds.png",
+    address: "حي 600 مسكن مدرسة البدر",
     email: "esalaamEcole@gmail.com",
     phone: "0562413935",
     description:

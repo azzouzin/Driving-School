@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:getx_skeleton/app/data/models/school_model.dart';
 
 import '../../components/custom_button.dart';
+import '../resigntonewschool/resigntonewschool_view.dart';
 import './schooldetails_controller.dart';
 
 class SchoolDetailsView extends GetView<SchoolDetailsController> {
@@ -217,7 +218,9 @@ class SchoolDetailsView extends GetView<SchoolDetailsController> {
                       "التسجيل الان",
                       style: TextStyle(color: Colors.white),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(const ResignToNewSchoolView());
+                    },
                     width: 200.w,
                     high: 50.h,
                     borderRadius: 30.r,
