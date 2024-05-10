@@ -8,20 +8,19 @@ import './test_controller.dart';
 class TestView extends GetView<TestController> {
   TestView({super.key});
   final List<String> questions = [
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
-    '1- First Question',
+    "  متى يمنع الدوران الى اليسار ",
+    "متى يمنع القيام بنصف دورة",
+    "متى تكون الأولوية الى اليمين ",
+    "ماهي انظمة الأولوية ",
+    "ماهو الصنف الممتحن فيه ",
+    "ماحي حالات الوقوف والتوقف",
+    "ماهي انواع الخطوط المتقاطعة ",
+    "أين يوجد الضوء الاصفر الغماز ",
+    "ماهي مسافة الامان ؟ ماهي مسافة الإلتصاق ؟ ومسافة الكبح ؟ ",
+    "ماهي الاخطار المتعلقة بالسياقة عند المطر الغزير",
+    "ماهي لوجه للتشابه بين الطريق السيار و السريع ",
+    "ماهو دور مختلف اضواء المركبات دات المحرك ؟ اذكرهم ؟",
+    "ماهي المناورات الممنوعة في الطريق السيار و السريع ؟",
   ];
   final List<TextEditingController> controllers = [
     TextEditingController(),
@@ -121,7 +120,15 @@ class TestView extends GetView<TestController> {
                                   style: TextStyle(color: Colors.white),
                                 )),
                           ],
-                        )
+                        ),
+                            ElevatedButton(
+                                onPressed: () {
+                                  carouselController.previousPage();
+                                },
+                                child: const Text(
+                                  "السابق",
+                                  style: TextStyle(color: Colors.white),
+                                )),
                       ]),
                 ),
               )

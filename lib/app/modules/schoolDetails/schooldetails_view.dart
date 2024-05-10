@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_skeleton/app/data/models/school_model.dart';
 
-import '../../../config/theme/light_theme_colors.dart';
 import '../../components/custom_button.dart';
 import './schooldetails_controller.dart';
 
