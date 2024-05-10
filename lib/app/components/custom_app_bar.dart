@@ -27,7 +27,13 @@ class MyAppBar extends StatelessWidget {
                 style: Get.textTheme.labelMedium,
               ),
             ],
-          )
+          ),
+          Spacer(),
+          SizedBox(
+            width: 50,
+            height: 50,
+            child: ClipOval(child: Image.asset("assets/images/app_icon.jpg")),
+          ),
         ],
       ),
     );

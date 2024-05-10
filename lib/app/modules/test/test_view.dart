@@ -13,11 +13,20 @@ class TestView extends GetView<TestController> {
     "1 الى ماذا تشير الصورة في الاسفل",
     "2 الى ماذا تشير الصورة في الاسفل",
     "3 الى ماذا تشير الصورة في الاسفل",
-    "3 الى ماذا تشير الصورة في الاسفل",
     "4 الى ماذا تشير الصورة في الاسفل",
     "5 الى ماذا تشير الصورة في الاسفل",
     "6 الى ماذا تشير الصورة في الاسفل",
     "7 الى ماذا تشير الصورة في الاسفل",
+    "8 الى ماذا تشير الصورة في الاسفل",
+    "ماهي الاجابة الصحيحة9 ",
+    "ماهي الاجابة الصحيحة10 ",
+    "ماهي الاجابة الصحيحة11 ",
+    "ماهي الاجابة الصحيحة12 ",
+    "ماهي الاجابة الصحيحة13 ",
+    "ماهي الاجابة الصحيحة14 ",
+    "ماهي الاجابة  الصحيحة 15 ",
+    "ماهي الاجابة الصحيحة 16  ",
+    "ماهي الاجابة الصحيحة 17  ",
     "متى يمنع الدوران الى اليسار ",
     "متى يمنع القيام بنصف دورة",
     "متى تكون الأولوية الى اليمين ",
@@ -55,8 +64,13 @@ class TestView extends GetView<TestController> {
     return Scaffold(
       appBar: AppBar(title: const Text("اختبار رخصة السياقة"), actions: [
         CircleAvatar(
-          child: ClipOval(child: Image.asset("assets/images/person1.png")),
+          child: SizedBox(
+            width: 50,
+            height: 50,
+            child: ClipOval(child: Image.asset("assets/images/app_icon.jpg")),
+          ),
         ),
+        Gap(10),
       ]),
       body: Expanded(
         child: CarouselSlider(
@@ -81,7 +95,7 @@ class TestView extends GetView<TestController> {
                           e,
                           style: Get.theme.textTheme.labelLarge,
                         ),
-                        questions.indexOf(e) < 8
+                        questions.indexOf(e) < 17
                             ? Image.asset(
                                 "assets/images/${questions.indexOf(e) + 1}.jpg")
                             : Container(),
@@ -121,6 +135,9 @@ class TestView extends GetView<TestController> {
                           children: [
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(60),
+                                  ),
                                   backgroundColor: Colors.green,
                                 ),
                                 onPressed: () {
@@ -134,6 +151,9 @@ class TestView extends GetView<TestController> {
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.orange,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(60),
+                                ),
                               ),
                               onPressed: () {
                                 carouselController.previousPage();
@@ -147,19 +167,24 @@ class TestView extends GetView<TestController> {
                         ),
                         Gap(16.h),
                         ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                fixedSize: Size(300.w, 50)),
-                            onPressed: () {
-                              Get.back();
-                              CustomSnackBar.showCustomSnackBar(
-                                  title: "تم تسجيل الاختبار بنجاح",
-                                  message:
-                                      " سيتم عرض النتيجة عند تقييم الاختبار من طرف المدرسة");
-                            },
-                            child: const Text(
-                              "انهاء الاختبار",
-                              style: TextStyle(color: Colors.white),
-                            )),
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(60),
+                              ),
+                              fixedSize: Size(300.w, 50)),
+                          onPressed: () {
+                            Get.back();
+                            CustomSnackBar.showCustomSnackBar(
+                                title: "تم تسجيل الاختبار بنجاح",
+                                message:
+                                    " سيتم عرض النتيجة عند تقييم الاختبار من طرف المدرسة");
+                          },
+                          child: const Text(
+                            "انهاء الاختبار",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Gap(16.h),
                       ]),
                 ),
               )

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:getx_skeleton/app/data/models/user_model.dart';
 
 import '../../components/custom_app_bar.dart';
 import '../chat/chat_view.dart';
@@ -14,6 +16,26 @@ class SchoolView extends StatefulWidget {
 }
 
 class _SchoolViewState extends State<SchoolView> {
+  List<UserModel> students = [
+    UserModel(name: "Merouani Azouz", email: "Code", phone: "0562413935"),
+    UserModel(name: "Amir Gedou", email: "Créneau", phone: "0562413935"),
+    UserModel(name: "Boutifia Amin", email: "Code", phone: "0562413935"),
+    UserModel(name: "Merouani Azouz", email: "Code", phone: "0562413935"),
+    UserModel(
+        name: "Boutine Mohammed", email: "Circulation", phone: "0562413935"),
+    UserModel(name: "Salim Azouz", email: "Circulation", phone: "0562413935"),
+    UserModel(name: "Loubna Kacher", email: "Circulation", phone: "0562413935"),
+    UserModel(name: "Oualid Arjoun", email: "Créneau", phone: "0562413935"),
+    UserModel(name: "Sadam Bedjaoui", email: "Code", phone: "0562413935"),
+    UserModel(name: "Ilyas Anis", email: "Code", phone: "0562413935"),
+    UserModel(name: "Abir belhadj", email: "Créneau", phone: "0562413935"),
+    UserModel(name: "Faouzi Lagjaa", email: "Créneau", phone: "0562413935"),
+    UserModel(name: "Walid Saadii", email: "Créneau", phone: "0562413935"),
+    UserModel(name: "Bou Abdellah Salim", email: "Code", phone: "0562413935"),
+    UserModel(name: "Yahya Yahya", email: "Circulation", phone: "0562413935"),
+    UserModel(name: "Alaa Farourou", email: "Code", phone: "0562413935"),
+    UserModel(name: "Aissa Farid", email: "Circulation", phone: "0562413935"),
+  ];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -25,29 +47,31 @@ class _SchoolViewState extends State<SchoolView> {
               "قم بتسيير مدرستك من هنا ",
               style: TextStyle(color: Colors.black),
             ),
+            actions: [
+              CircleAvatar(
+                child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: ClipOval(
+                      child: Image.asset("assets/images/app_icon.jpg")),
+                ),
+              ),
+              Gap(10),
+            ],
             bottom: TabBar(
                 unselectedLabelColor: Get.theme.primaryColor.withOpacity(0.7),
                 labelColor: Get.theme.primaryColor,
                 indicatorColor: Colors.orange,
                 indicatorSize: TabBarIndicatorSize.tab,
-                tabs: const [
+                tabs: [
                   Tab(
-                    child: Icon(
-                      Icons.person_outline,
-                      size: 30,
-                    ),
+                    text: "الطلاب",
                   ),
                   Tab(
-                    child: Icon(
-                      Icons.document_scanner,
-                      size: 30,
-                    ),
+                    text: "الوثائق",
                   ),
                   Tab(
-                    child: Icon(
-                      Icons.present_to_all,
-                      size: 30,
-                    ),
+                    text: "الاحصائيات",
                   ),
                 ]),
           ),
@@ -72,15 +96,15 @@ class _SchoolViewState extends State<SchoolView> {
                                           "assets/images/person1.png"),
                                     ),
                                   ),
-                                  Text("مرواني عزوز "),
-                                  Text("05 62 41 39 35"),
-                                  Text("Code"),
+                                  Text(students[index].name!),
+                                  Text(students[index].phone!),
+                                  Text(students[index].email!),
                                 ],
                               ),
                             ),
                           ),
                         ),
-                    itemCount: 10),
+                    itemCount: students.length),
               ),
               Expanded(child: DocumentsPage()),
               Expanded(child: StatsPage()),

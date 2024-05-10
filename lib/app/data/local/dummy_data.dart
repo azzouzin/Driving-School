@@ -18,7 +18,7 @@ final listOfSchools = [
     image: "assets/images/ds.jpg",
     address: "حي 1500 مسكن مدرسة الفتح",
     email: "esalaamEcole@gmail.com",
-    phone: "0562413935",
+    phone: "0762413940",
     description:
         "مدرسة متخصصة في مجال تعليم السياقة ، مدرسة متخصصة في مجال تعليم السياقي ",
     rating: 4.5,
@@ -29,7 +29,7 @@ final listOfSchools = [
     image: "assets/images/ds.png",
     address: "حي 600 مسكن مدرسة البدر",
     email: "esalaamEcole@gmail.com",
-    phone: "0562413935",
+    phone: "0656232135",
     description:
         "مدرسة متخصصة في مجال تعليم السياقة ، مدرسة متخصصة في مجال تعليم السياقي ",
     rating: 3.5,

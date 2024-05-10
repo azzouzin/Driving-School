@@ -86,6 +86,11 @@ class _HomeViewState extends State<HomeView> {
                               child: ListView(
                                 children: [
                                   ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(60),
+                                      ),
+                                    ),
                                     onPressed: () {
                                       Get.toNamed(Routes.TEST);
                                     },
@@ -96,6 +101,11 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                   const Gap(10),
                                   ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(60),
+                                      ),
+                                    ),
                                     onPressed: () {},
                                     child: const Text(
                                       "اختبار رقم 2",
@@ -104,6 +114,11 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                   const Gap(10),
                                   ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(60),
+                                      ),
+                                    ),
                                     onPressed: () {},
                                     child: const Text(
                                       "اختبار رقم 3",
@@ -121,8 +136,7 @@ class _HomeViewState extends State<HomeView> {
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.person), label: "قسم التلاميذ"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.school), label: "المدرسة"),
+          BottomNavigationBarItem(icon: Icon(Icons.school), label: "المدرسة"),
         ],
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
