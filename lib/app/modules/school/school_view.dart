@@ -64,15 +64,9 @@ class _SchoolViewState extends State<SchoolView> {
                 indicatorColor: Colors.orange,
                 indicatorSize: TabBarIndicatorSize.tab,
                 tabs: [
-                  Tab(
-                    text: "الطلاب",
-                  ),
-                  Tab(
-                    text: "الوثائق",
-                  ),
-                  Tab(
-                    text: "الاحصائيات",
-                  ),
+                  Tab(text: "الطلاب"),
+                  Tab(text: "الوثائق"),
+                  Tab(text: "الاحصائيات"),
                 ]),
           ),
           body: TabBarView(
