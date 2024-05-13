@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_skeleton/app/modules/home/home_binding.dart';
+import 'package:getx_skeleton/app/modules/home/home_view.dart';
 import 'package:logger/logger.dart';
 
 import '../../routes/routes.dart';
@@ -28,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
               //  title: 'General Maintanance Service',
               logo: 'assets/images/app_icon.jpg',
               // background: backgroundImage,
-              onLogin: (s) => Get.toNamed(Routes.HOME),
+              onLogin: (s) => Get.to(HomeView(), binding: HomeBinding()),
               onSignup: (s) => Get.toNamed(Routes.HOME),
               theme: MyTheme.myLoginTheme,
               additionalSignupFields: const [
@@ -75,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
 
 abstract class MyTheme {
   static LoginTheme myLoginTheme = LoginTheme(
+    buttonStyle: TextStyle(fontSize: 16.sp),
     logoWidth: 0.4,
     cardTopPosition: Get.width / 1.5,
     pageColorLight: Get.theme.primaryColor.withOpacity(0),
