@@ -44,6 +44,8 @@ dependencies:
   rflutter_alert: ^2.0.7
   carousel_slider: ^4.2.1
   flutter_animate: ^4.5.0
+  stacked_notification_cards: ^0.1.0-dev.5
+  flutter_login: ^5.0.0
 
 dev_dependencies:
   mockito:
