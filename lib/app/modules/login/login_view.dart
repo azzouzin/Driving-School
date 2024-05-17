@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
+
 import 'package:getx_skeleton/app/modules/home/home_binding.dart';
 import 'package:getx_skeleton/app/modules/home/home_view.dart';
-import 'package:logger/logger.dart';
 
 import '../../routes/routes.dart';
 
