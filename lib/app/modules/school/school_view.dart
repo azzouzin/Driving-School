@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:getx_skeleton/app/data/models/user_model.dart';
 
 import '../../components/custom_app_bar.dart';
+import '../carrepair/carrepair_view.dart';
 import '../chat/chat_view.dart';
 import '../statspage/statspage_view.dart';
 import 'views/documents.dart';
@@ -39,7 +40,7 @@ class _SchoolViewState extends State<SchoolView> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -56,17 +57,18 @@ class _SchoolViewState extends State<SchoolView> {
                       child: Image.asset("assets/images/app_icon.jpg")),
                 ),
               ),
-              Gap(10),
+              const Gap(10),
             ],
             bottom: TabBar(
                 unselectedLabelColor: Get.theme.primaryColor.withOpacity(0.7),
                 labelColor: Get.theme.primaryColor,
                 indicatorColor: Colors.orange,
                 indicatorSize: TabBarIndicatorSize.tab,
-                tabs: [
+                tabs: const [
                   Tab(text: "الطلاب"),
                   Tab(text: "الوثائق"),
                   Tab(text: "الاحصائيات"),
+                  Tab(text: "اشعارات"),
                 ]),
           ),
           body: TabBarView(
@@ -74,7 +76,7 @@ class _SchoolViewState extends State<SchoolView> {
               ListView.builder(
                   itemBuilder: (_, index) => Container(
                         child: InkWell(
-                          onTap: () => Get.to(ChatPage()),
+                          onTap: () => Get.to(const ChatPage()),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -97,8 +99,9 @@ class _SchoolViewState extends State<SchoolView> {
                         ),
                       ),
                   itemCount: students.length),
-              DocumentsPage(),
+              const DocumentsPage(),
               StatsPage(),
+              CarRepairView(),
             ],
           )),
     );

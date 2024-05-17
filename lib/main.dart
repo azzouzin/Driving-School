@@ -51,7 +51,7 @@ Future<void> main() async {
             );
           },
           //  initialRoute: Routes.TEST,
-          initialRoute: AppPages.routes[0].name,
+          initialRoute: Routes.LOGIN,
           // first screen to show when app is running
           getPages: AppPages.routes,
           // app screens
