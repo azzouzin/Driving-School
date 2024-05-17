@@ -72,139 +72,137 @@ class TestView extends GetView<TestController> {
         ),
         Gap(10),
       ]),
-      body: Expanded(
-        child: CarouselSlider(
-          items: questions
-              .map(
-                (e) => SingleChildScrollView(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        const Gap(100),
-                        Row(
-                          children: [
-                            Text(
-                              "السؤال رقم ${questions.indexOf(e) + 1} :",
-                              style: Get.theme.textTheme.labelLarge,
-                            ),
-                          ],
-                        ),
-                        const Gap(10),
-                        Text(
-                          e,
-                          style: Get.theme.textTheme.labelLarge,
-                        ),
-                        questions.indexOf(e) < 17
-                            ? Image.asset(
-                                "assets/images/${questions.indexOf(e) + 1}.jpg")
-                            : Container(),
-                        const Gap(10),
+      body: CarouselSlider(
+        items: questions
+            .map(
+              (e) => SingleChildScrollView(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Gap(100),
+                      Row(
+                        children: [
+                          Text(
+                            "السؤال رقم ${questions.indexOf(e) + 1} :",
+                            style: Get.theme.textTheme.labelLarge,
+                          ),
+                        ],
+                      ),
+                      const Gap(10),
+                      Text(
+                        e,
+                        style: Get.theme.textTheme.labelLarge,
+                      ),
+                      questions.indexOf(e) < 17
+                          ? Image.asset(
+                              "assets/images/${questions.indexOf(e) + 1}.jpg")
+                          : Container(),
+                      const Gap(10),
 
-                        Row(
-                          children: [
-                            Text(
-                              "الاجابة رقم ${questions.indexOf(e) + 1} :",
-                              style: Get.theme.textTheme.labelLarge,
+                      Row(
+                        children: [
+                          Text(
+                            "الاجابة رقم ${questions.indexOf(e) + 1} :",
+                            style: Get.theme.textTheme.labelLarge,
+                          ),
+                        ],
+                      ),
+                      const Gap(10),
+                      SizedBox(
+                        height: Get.height * 0.3,
+                        child: TextFormField(
+                          maxLines: 30,
+                          decoration: InputDecoration(
+                            hintText: "اكتب الاجابة هنا ",
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide: const BorderSide(
+                                  color: Colors.blue, width: 1),
                             ),
-                          ],
-                        ),
-                        const Gap(10),
-                        SizedBox(
-                          height: Get.height * 0.3,
-                          child: TextFormField(
-                            maxLines: 30,
-                            decoration: InputDecoration(
-                              hintText: "اكتب الاجابة هنا ",
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                    color: Colors.blue, width: 1),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                    color: Colors.blue, width: 1),
-                              ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide: const BorderSide(
+                                  color: Colors.blue, width: 1),
                             ),
                           ),
                         ),
-                        //     const Gap(100),
-                        const Gap(16),
-                        Row(
-                          children: [
-                            ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(60),
-                                  ),
-                                  backgroundColor: Colors.green,
-                                ),
-                                onPressed: () {
-                                  carouselController.nextPage();
-                                },
-                                child: const Text(
-                                  "التالي",
-                                  style: TextStyle(color: Colors.white),
-                                )),
-                            const Spacer(),
-                            ElevatedButton(
+                      ),
+                      //     const Gap(100),
+                      const Gap(16),
+                      Row(
+                        children: [
+                          ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(60),
                                 ),
+                                backgroundColor: Colors.green,
                               ),
                               onPressed: () {
-                                carouselController.previousPage();
+                                carouselController.nextPage();
                               },
                               child: const Text(
-                                "السابق",
+                                "التالي",
                                 style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Gap(16.h),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
+                              )),
+                          const Spacer(),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.orange,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(60),
                               ),
-                              fixedSize: Size(300.w, 50)),
-                          onPressed: () {
-                            Get.back();
-                            CustomSnackBar.showCustomSnackBar(
-                                title: "تم تسجيل الاختبار بنجاح",
-                                message:
-                                    " سيتم عرض النتيجة عند تقييم الاختبار من طرف المدرسة");
-                          },
-                          child: const Text(
-                            "انهاء الاختبار",
-                            style: TextStyle(color: Colors.white),
+                            ),
+                            onPressed: () {
+                              carouselController.previousPage();
+                            },
+                            child: const Text(
+                              "السابق",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
+                        ],
+                      ),
+                      Gap(16.h),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(60),
+                            ),
+                            fixedSize: Size(300.w, 50)),
+                        onPressed: () {
+                          Get.back();
+                          CustomSnackBar.showCustomSnackBar(
+                              title: "تم تسجيل الاختبار بنجاح",
+                              message:
+                                  " سيتم عرض النتيجة عند تقييم الاختبار من طرف المدرسة");
+                        },
+                        child: const Text(
+                          "انهاء الاختبار",
+                          style: TextStyle(color: Colors.white),
                         ),
-                        Gap(16.h),
-                      ]),
-                ),
-              )
-              .toList(),
-          carouselController: carouselController,
-          options: CarouselOptions(
-            height: Get.height,
-            aspectRatio: 16 / 9,
-            viewportFraction: 0.8,
-            initialPage: 0,
-            enableInfiniteScroll: false,
-            reverse: false,
-            autoPlay: false,
-            autoPlayInterval: const Duration(seconds: 3),
-            autoPlayAnimationDuration: const Duration(milliseconds: 800),
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enlargeCenterPage: true,
-            enlargeFactor: 0.3,
-            scrollDirection: Axis.horizontal,
-          ),
+                      ),
+                      Gap(16.h),
+                    ]),
+              ),
+            )
+            .toList(),
+        carouselController: carouselController,
+        options: CarouselOptions(
+          height: Get.height,
+          aspectRatio: 16 / 9,
+          viewportFraction: 0.8,
+          initialPage: 0,
+          enableInfiniteScroll: false,
+          reverse: false,
+          autoPlay: false,
+          autoPlayInterval: const Duration(seconds: 3),
+          autoPlayAnimationDuration: const Duration(milliseconds: 800),
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enlargeCenterPage: true,
+          enlargeFactor: 0.3,
+          scrollDirection: Axis.horizontal,
         ),
       ),
     );

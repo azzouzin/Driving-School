@@ -71,37 +71,34 @@ class _SchoolViewState extends State<SchoolView> {
           ),
           body: TabBarView(
             children: [
-              Expanded(
-                child: ListView.builder(
-                    itemBuilder: (_, index) => Container(
-                          child: InkWell(
-                            onTap: () => Get.to(ChatPage()),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                    width: 50,
-                                    height: 50,
-                                    child: ClipOval(
-                                      child: Image.asset(
-                                          "assets/images/person1.png"),
-                                    ),
+              ListView.builder(
+                  itemBuilder: (_, index) => Container(
+                        child: InkWell(
+                          onTap: () => Get.to(ChatPage()),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 50,
+                                  height: 50,
+                                  child: ClipOval(
+                                    child: Image.asset(
+                                        "assets/images/person1.png"),
                                   ),
-                                  Text(students[index].name!),
-                                  Text(students[index].phone!),
-                                  Text(students[index].email!),
-                                ],
-                              ),
+                                ),
+                                Text(students[index].name!),
+                                Text(students[index].phone!),
+                                Text(students[index].email!),
+                              ],
                             ),
                           ),
                         ),
-                    itemCount: students.length),
-              ),
-              Expanded(child: DocumentsPage()),
-              Expanded(child: StatsPage()),
+                      ),
+                  itemCount: students.length),
+              DocumentsPage(),
+              StatsPage(),
             ],
           )),
     );
